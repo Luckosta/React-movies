@@ -1,3 +1,19 @@
 input::placeholder {
    color: black;
 }
+
+.form {
+   position: relative;
+}
+
+.search__btn {
+   position: absolute;
+   top: 0.2rem;
+   right: 0.5rem;
+}
+
+.radio {
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   justify-items: center;
+}
