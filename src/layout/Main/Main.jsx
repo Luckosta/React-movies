@@ -6,7 +6,7 @@ import Preloader from '../../components/Preloader/Preloader';
 import Search from '../../components/Search/Search';
 import NotFound from '../../components/NotFound/NotFound';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+
 
 class Main extends React.Component {
    state = {
@@ -15,7 +15,7 @@ class Main extends React.Component {
 
    searchMovies = async (str, type = 'all') => {
       const response = await fetch(
-         `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
+         `https://www.omdbapi.com/?apikey=d3861056&s=${str}${
             type !== 'all' ? `&type=${type}` : ''
          }`
       );
@@ -28,7 +28,7 @@ class Main extends React.Component {
 
    request = async () => {
       const response = await fetch(
-         `https://www.omdbapi.com/?apikey=${API_KEY}&s=killer`
+         `https://www.omdbapi.com/?apikey=d3861056&s=killer`
       );
       if (!response.ok) {
          throw new Error(response.status);
